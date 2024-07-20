@@ -1,0 +1,172 @@
+:root {
+    --violeta : hsl(257, 40%, 49%);
+    --magenta : #e882e8;
+    --blanco : hsl(0, 0%, 100%);
+
+    --fuente : 'Poppins', san-serif;
+    --fuenteSecundaria : 'Open Sans';
+
+    --separacion : 5rem;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit
+}
+body {
+    position: relative;
+    font-size: 1.6rem;
+    font-family: var(--fuente);
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--violeta);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+@media (min-width: 1440px) {
+    body {
+        background-image: url(../images/bg-desktop.svg);
+    }
+}
+img {
+    width: 100%;
+    display: block;
+}
+h1, p {
+    margin: 0;
+}
+[class$="__contenedor"] {
+    max-width: 120rem;
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 1440px) {
+    [class$="__contenedor"] {
+        text-align: left;
+    }
+}
+.main__logo {
+    width: 20rem;
+    margin-bottom: var(--separacion);
+}
+.main__grid {
+    margin-bottom: var(--separacion);
+}
+@media (min-width: 1440px) {
+    .main__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6rem;
+        margin-bottom: 0rem;
+    }
+}
+.main__mockups {
+    margin-bottom: var(--separacion);
+}
+@media (min-width: 1440px) {
+    .main__mockups {
+        margin-bottom: 0;
+    }
+}
+.main__texto {
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 1440px) {
+    .main__texto {
+        align-items: start;
+    }
+}
+.main__heading {
+    font-size: 2.5rem;
+}
+@media (min-width: 1440px) {
+    .main__heading {
+        font-size: 3.5rem;
+    }
+}
+.main__info {
+    line-height: 1.5;
+    margin: 2rem 0;
+    opacity: .8;
+    font-family: var(--fuenteSecundaria);
+}
+.main__boton {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    text-decoration: none;
+    color: var(--violeta);
+    background-color: var(--blanco);
+    padding: 1.5rem;
+    border-radius: 3rem;
+    box-shadow: 0px 5px 10px -5px black;
+    transition-duration: .2s;
+}
+@media (min-width: 768px) {
+    .main__boton {
+        width: 50%;
+    }
+}
+@media (min-width: 1440px) {
+    .main__boton {
+        width: 30%;
+    }
+}
+.main__boton:hover {
+    background-color: var(--magenta);
+    color: var(--blanco);
+    transition-duration: .3s;
+}
+.links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+@media (min-width: 1440px) {
+    .links {
+        margin-top: 2rem;
+        justify-content: end;
+    }
+}
+.link {
+    border-radius: 50%;
+    border: .1rem solid var(--blanco);
+    overflow: hidden;
+    padding: 1rem;
+}
+.link:hover {
+    filter: invert(32%) sepia(42%) saturate(5506%) hue-rotate(280deg) brightness(94%) contrast(96%);
+}
+.link__imagen {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+@media (min-width: 768px) {
+    .link__imagen {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+.footer {
+    margin: var(--separacion) 1rem 1rem;
+    text-align: center;
+}
+.attribution {
+    color: var(--blanco);
+}
+.attribution a {
+    color: var(--magenta);
+    text-decoration: none;
+}
+.attribution a:hover {
+    font-weight: 700;
+}
